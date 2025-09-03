@@ -31,8 +31,11 @@ export const Welcome: Story = {
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           Component Library
         </h1>
-        <p className="text-xl text-gray-600 mb-8">
+        <p className="text-xl text-gray-600 mb-4">
           A modern design system built with React, TypeScript, and Tailwind CSS
+        </p>
+        <p className="text-sm text-gray-500 mb-8">
+          Created by <strong>Nazarii Medukha</strong> for demo & testing purposes
         </p>
         <div className="flex justify-center gap-2">
           <Badge variant="default">React</Badge>
@@ -143,6 +146,19 @@ export const Welcome: Story = {
           <Button>View Components</Button>
           <Button variant="outline">Documentation</Button>
         </div>
+      </div>
+
+      {/* Footer with attribution */}
+      <div className="mt-16 pt-8 border-t border-gray-200 text-center">
+        <div className="flex justify-center items-center gap-4 text-sm text-gray-500">
+          <span>Built with ❤️ by</span>
+          <Badge variant="outline" className="font-medium">
+            Nazarii Medukha
+          </Badge>
+        </div>
+        <p className="text-xs text-gray-400 mt-2">
+          Demo & testing purposes • Modern React component library
+        </p>
       </div>
     </div>
   ),
