@@ -1,0 +1,79 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Import Tailwind CSS base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for consistent theming */
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+  
+  /* Ensure consistent font rendering */
+  * {
+    border-color: hsl(214.3 31.8% 91.4%);
+  }
+  
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body {
+    @apply font-sans text-foreground bg-background;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Enhanced component utilities */
+@layer components {
+  /* Modern button base */
+  .btn-base {
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium;
+    @apply transition-all duration-200 ease-in-out;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+    @apply disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  /* Modern input base */
+  .input-base {
+    @apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2;
+    @apply text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium;
+    @apply placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2;
+    @apply focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  /* Modern card base */
+  .card-base {
+    @apply rounded-lg border border-border bg-card text-card-foreground shadow-soft;
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  /* Glass morphism effect */
+  .glass {
+    @apply backdrop-blur-md bg-white/80 border border-white/20;
+  }
+  
+  /* Gradient backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(221.2 83.2% 53.3%) 0%, hsl(221.2 83.2% 43.3%) 100%);
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(210 40% 96%) 0%, hsl(210 40% 92%) 100%);
+  }
+  
+  /* Animation utilities */
+  .animate-in {
+    @apply animate-fade-in;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-200 ease-out hover:translate-y-[-2px];
+  }
+}

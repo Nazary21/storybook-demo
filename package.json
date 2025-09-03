@@ -1,0 +1,55 @@
+{
+  "name": "storybook-components-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "description": "A modern component library built with React, TypeScript, and Tailwind CSS - showcasing beautiful, accessible UI components",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
+    "build": "storybook build",
+    "build-storybook": "storybook build",
+    "preview": "storybook build && npx http-server storybook-static",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf storybook-static node_modules/.cache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nazary21/storybook-demo.git"
+  },
+  "homepage": "https://storybook-demo-nazary21.vercel.app",
+  "keywords": [
+    "react",
+    "typescript",
+    "tailwind",
+    "components",
+    "storybook"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-links": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/react": "^8.6.14",
+    "@storybook/react-vite": "^8.6.14",
+    "@storybook/testing-library": "^0.2.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "storybook": "^8.6.14",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.2",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1"
+  }
+}
